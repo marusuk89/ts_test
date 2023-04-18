@@ -1,0 +1,53 @@
+@localURL = http://localhost:3000
+
+//테스트
+@Token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoiaWFtbWluc2VvazIyQGdtYWlsLmNvbSIsImlhdCI6MTY4MTI2MDEwOCwiZXhwIjoxNjgxMjYzNzA4fQ.NmqGukOyX0Pb2LBx9ekJPrrC1JMYy2B7VghepDKdyEg
+
+### 회원가입
+POST {{localURL}}/user/register
+Content-Type: application/json
+
+{
+    "email": "iamminseok22gmailcom",
+    "password": "!Qwertyui12"
+}
+
+### 로그인
+POST {{localURL}}/user/login
+Content-Type: application/json
+
+{
+    "email": "iamminseok22@gmail.com",
+    "password": "!Qwertyui12"
+}
+
+
+
+### 유저 삭제(로그아웃)
+GET {{localURL}}/user/deleteaccount
+Content-Type: application/json
+Authorization: Bearer {{Token}}
+
+### 비밀번호 재설정 1.현재 암호 체크
+POST {{localURL}}/user/checkpassword
+Content-Type: application/json
+Authorization: Bearer {{Token}}
+
+{
+    "password": "!Qwertyui12"
+}
+
+### 비밀번호 재설정 2.새로운 비밀번호 설정
+POST {{localURL}}/user/resetpassword
+Content-Type: application/json
+Authorization: Bearer {{Token}}
+
+{
+    "password": "!Qwertyui12",
+    "new_password": "!Qwertyui34"
+}
+
+### 토큰 테스트
+GET {{localURL}}/user/testtoken
+Content-Type: application/json
+Authorization: Bearer {{Token}}

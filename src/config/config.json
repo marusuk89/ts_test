@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "admin",
+    "password": "12345678",
+    "database": "ant_test",
+    "host": "mintest.cfrm6ylsjgcg.ap-northeast-2.rds.amazonaws.com",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "admin",
+    "password": "12345678",
+    "database": "ant_test",
+    "host": "mintest.cfrm6ylsjgcg.ap-northeast-2.rds.amazonaws.com",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "admin",
+    "password": "12345678",
+    "database": "ant_test",
+    "host": "mintest.cfrm6ylsjgcg.ap-northeast-2.rds.amazonaws.com",
+    "dialect": "mysql"
+  }
+}
